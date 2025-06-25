@@ -1,0 +1,111 @@
+:root {
+    --color-weak: #e74c3c;
+    --color-medium: #f39c12;
+    --color-strong: #2ecc71;
+    --color-neutral: #34495e; /* A nice dark blue-grey */
+    --text-color: #ecf0f1;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    transition: background-color 0.7s ease-in-out;
+    background-color: var(--color-neutral); /* Default state */
+}
+
+.content {
+    max-width: 90%;
+    padding: 20px;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#password-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    text-align: center;
+    outline: none;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#password-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#strength-text {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: 400;
+    min-height: 1.5em; /* Prevent layout shift */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#time-estimate {
+    font-weight: 700;
+}
+
+.info {
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+    font-weight: 300;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--text-color);
+}
+
+.github-logo {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
